@@ -170,6 +170,7 @@ DWORD WINAPI sendThreadFunc(LPVOID lpParam)
         printf("\n me :  ");
         fgets(sendbuf, sizeof(sendbuf), stdin);
 
+
         // Remove newline character if present
         sendbuflen = strlen(sendbuf);
         if (sendbuflen > 0 && sendbuf[sendbuflen - 1] == '\n')
@@ -193,7 +194,7 @@ DWORD WINAPI sendThreadFunc(LPVOID lpParam)
         else if (!memcmp(sendbuf, "/leave", 6))
         {
             running = 0;
-            break;
+            exit(1);
         }
     }
 

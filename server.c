@@ -203,7 +203,6 @@ int main()
                     if (memcmp(recvbuf, "/quit", 5 * sizeof(char)) == 0)
                     {
                         printf("%s left the chat.\n", clients[i].username);
-                        running = 0;
                         break;
                     }
 
